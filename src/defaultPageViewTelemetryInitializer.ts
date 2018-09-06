@@ -19,8 +19,8 @@ namespace cc.appinsights {
 
             var pageView = envelope.data.baseData;
             pageView.properties = pageView.properties || {};
-            pageView.properties["controller"] = parseControllerName($route.current.controller);
-            pageView.properties["routePath"] = $route.current.originalPath || "/";
+            pageView.properties["Ng.Controller"] = parseControllerName($route.current.controller);
+            pageView.properties["Ng.RoutePath"] = $route.current.originalPath || "/";
 
             return true;
         }
