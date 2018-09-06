@@ -22,6 +22,9 @@ namespace cc.appinsights {
          * If true, automatically send a page view event on each $route change (default=true) 
          */
         autoTrackPageViews?: boolean;
+        /**
+         * Telemtry initializers that should run when an ajax dependency item is about to be sent;
+         */
         ajaxTelemetryInitializers?: Array<TelemetryInitializer | string>,
         /**
          * Telemtry initializers that should run when a page view item is about to be sent;
