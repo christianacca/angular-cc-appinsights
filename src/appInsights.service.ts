@@ -99,7 +99,7 @@ namespace cc.appinsights {
 
         private _isAjaxTelemetryItem(envelope: Microsoft.ApplicationInsights.Telemetry.Common.Envelope) {
             return envelope.name === Microsoft.ApplicationInsights.Telemetry.RemoteDependencyData.envelopeType &&
-                envelope.data.baseData.dependencyKind === AI.DependencyKind.Http;
+                envelope.data.baseData.type === "Ajax";
         }
 
         private _recordPageView(evt: ng.IAngularEvent, route: ng.route.IRoute) {

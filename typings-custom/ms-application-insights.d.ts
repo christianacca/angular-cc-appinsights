@@ -8,9 +8,9 @@ declare namespace AI {
 }
 declare namespace Microsoft.Telemetry {
     export interface Base {
-        baseData: { 
-            dependencyKind: AI.DependencyKind;
-            properties: { [property: string] : any } 
+        baseData: {
+            properties: { [property: string] : any },
+            type: "Ajax" | "SQL" | "Other"
         }
     }
 }
