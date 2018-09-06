@@ -16,7 +16,6 @@ namespace cc.appinsights {
                 autoRun: true,
                 autoTrackExceptions: true,
                 autoTrackPageViews: true,
-                addPageViewCorrelationHeader: false,
                 ajaxTelemetryInitializers: [],
                 pageViewTelemetryInitializers: ['_ccDefaultPageViewTelemetryInitializer'],
                 telemetryInitializers: []
@@ -41,9 +40,6 @@ namespace cc.appinsights {
             this.configOptions = this._extend(this.configOptions, this.defaultOptions, options);
             if (this.configOptions.autoTrackExceptions) {
                 this._$provide.decorator("$exceptionHandler", this._decorateExceptionHandler);
-            }
-            if (this.configOptions.addPageViewCorrelationHeader) {
-                this._$httpProvider.interceptors.push('_ccAppInsightsHttpInterceptor');
             }
         }
 

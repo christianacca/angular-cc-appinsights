@@ -18,7 +18,6 @@
     "src/appInsights.provider.ts",
     "src/appInsights.service.ts",
     "src/appInsightsConfig.ts",
-    "src/appInsightsHttpInterceptor.ts",
     "src/defaultPageViewTelemetryInitializer.ts",
     "src/runBlock.ts",
     "src/appInsights.module.ts",

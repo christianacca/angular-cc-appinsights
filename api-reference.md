@@ -58,15 +58,6 @@ interface AppInsightsConfig {
      * If true, automatically send a page view event on each $route change (default=true) 
      */
     autoTrackPageViews?: boolean;
-    /**
-     * If true, add the current page operation id as a http header 
-     * (default header 'ai-pv-opid')  (default=false).
-     * Warning: this will trigger a CORS pre-flight options requests when the ajax request
-     * is being made to an origin not the one that served this script
-     * See also: 'disableCorrelationHeaders' options on the application insights SDK for
-     * further correlation options 
-     */
-    addPageViewCorrelationHeader?: boolean;
     ajaxTelemetryInitializers?: Array<TelemetryInitializer | string>,
     /**
      * Telemtry initializers that should run when a page view item is about to be sent;
